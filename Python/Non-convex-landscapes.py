@@ -57,8 +57,8 @@ w1_max = 20
 w2_min = -20
 w2_max = 20
 
-w1_range = np.arange(w1_min, w1_max, 1)
-w2_range = np.arange(w2_min, w2_max, 1)
+w1_range = np.arange(w1_min, w1_max, 0.1)
+w2_range = np.arange(w2_min, w2_max, 0.1)
 
 w1_grid, w2_grid = np.meshgrid(w1_range, w2_range)
 
@@ -72,14 +72,17 @@ loss_grid = loss2(w1_grid, w2_grid)
 # =============================================================================
 # Plotting the landscape
 # =============================================================================
-fig = plt.figure()
+fig = plt.figure(figsize=(30, 30))
+#fig = plt.figure()
 ax = plt.axes(projection='3d')
 
 #ax.plot_wireframe(t1_arr, t2_arr, cost_arr,  color='black')
-ax.plot_surface(w1_grid, w2_grid, loss_grid, cmap='Blues_r', linewidth=0,  antialiased=False, edgecolor='none', vmin =np.min(loss_grid), vmax =1.5*np.max(loss_grid)) #cmap='Blues_r',
+#ax.plot_surface(w1_grid, w2_grid, loss_grid, rstride=1, cstride=1, cmap='Blues_r', linewidth=0,  antialiased=False, edgecolor='none', vmin =np.min(loss_grid), vmax =1.5*np.max(loss_grid)) #cmap='Blues_r',
+ax.plot_surface(w1_grid, w2_grid, loss_grid, rstride=1, cstride=1, linewidth=0,  antialiased=False, edgecolor='none', vmin =np.min(loss_grid), vmax =2*np.max(loss_grid), cmap='Blues_r')
+
 ax.set_xlabel(r'$w1$', fontsize=20)
 ax.set_yticks(2*np.array([-10, -5, 0, 5, 10]))
 ax.set_xticks(2*np.array([-10, -5, 0, 5, 10]))
 ax.set_ylabel(r'$w2$', fontsize=20)
 ax.set_zlabel(r'$C(\theta)$', fontsize=20)  
-ax.view_init(25, -120)
+ax.view_init(44, -113)
