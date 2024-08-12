@@ -62,7 +62,7 @@ Below is a detailed list of the source code used for creating figures and tables
 | 4.3    | Stochastic gradient descent |  [Python](Python/Stochastic-gradient-descent.py)  | 
 | 4.4    | Early stopping in deep learning |  [Julia]()  | 
 | 4.5    | Non-convex loss landscapes |  [Python](Python/Non-convex-landscapes.py)  | 
-| 4.6    | Momentum enhancing gradient descent |  [Python]()  | 
+| 4.6    | Momentum enhancing gradient descent |  [Python](Python/Non-convex-landscapes.py)  | 
 | 4.7    | The computational graph for automatic differentiation |  [TikZ]()  | 
 | 4.8    | Line search concepts |  [Python]()  | 
 | 4.9    | The zig-zagging property of line search | [Python]()  | 
