@@ -57,7 +57,7 @@ Below is a detailed list of the source code used for creating figures and tables
 ### Chapter 4
 | Figure | Topic           | Source Code        |
 | ------ | --------------- | -----------        |
-| 4.1    | Convexity and local/global extrema   |    [Python]()  |  
+| 4.1    | Convexity and local/global extrema   |    [Python](Python/Convexity_and_local_extrema.py)  |  
 | 4.2    | Gradient descent with fixed or time dependent learning rate |  [Python]()  | 
 | 4.3    | Stochastic gradient descent |  [Python]()  | 
 | 4.4    | Early stopping in deep learning |  [Julia]()  | 
