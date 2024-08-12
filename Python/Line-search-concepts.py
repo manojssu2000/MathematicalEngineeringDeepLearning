@@ -80,21 +80,42 @@ y = np.zeros(size)
 for i in range(size):
     y[i] = line(t, d, alpha[i])
 
+# plt.plot(alpha, y, '-r')
+# #plt.xlabel(r'$\alpha$', fontsize=25, loc='right')
+# plt.ylabel(r'$C\left(\theta^{(t)} + \alpha \, \theta_{\mathsf{d}}^{(t)}\right)$', fontsize=20)
+# #plt.legend(fontsize=20)
+# plt.xlim(0, 0.003)
+# plt.ylim(-5, 45)
+# plt.rcParams["figure.figsize"] = (10,10)
+# ind_min = np.argmin(y)
+# ind_min = np.argmin(y)
+# alpha_opt = alpha[ind_min]
+# plt.plot([alpha_opt, alpha_opt], [-5, y[ind_min]], '-g', linewidth=2)
+# plt.text(alpha[ind_min]-0.00005, -11, r'$\alpha^{(t)}$', fontsize=20)
+# plt.text(alpha[ind_min]+0.0007, -9, r'$\alpha$', fontsize=20)
+# plt.xticks(fontsize=12)
+# plt.show()
+
 plt.plot(alpha, y, '-r')
-#plt.xlabel(r'$\alpha$', fontsize=25, loc='right')
 plt.ylabel(r'$C\left(\theta^{(t)} + \alpha \, \theta_{\mathsf{d}}^{(t)}\right)$', fontsize=20)
-#plt.legend(fontsize=20)
 plt.xlim(0, 0.003)
 plt.ylim(-5, 45)
-plt.rcParams["figure.figsize"] = (10,10)
-ind_min = np.argmin(y)
+plt.rcParams["figure.figsize"] = (10, 10)
+
+# Mark the minimum point
 ind_min = np.argmin(y)
 alpha_opt = alpha[ind_min]
 plt.plot([alpha_opt, alpha_opt], [-5, y[ind_min]], '-g', linewidth=2)
-plt.text(alpha[ind_min]-0.00005, -9, r'$\alpha^{(t)}$', fontsize=20)
+plt.text(alpha_opt - 0.00005, -11, r'$\alpha^{(t)}$', fontsize=20)
+plt.text(alpha_opt + 0.0007, -9, r'$\alpha$', fontsize=20)
+
+# Add arrow
+arrow_start = (alpha_opt, -9.5)
+arrow_end = (alpha_opt, -5)
+plt.annotate('', xy=arrow_end, xytext=arrow_start, arrowprops=dict(arrowstyle='->', color='blue', linewidth=2))
+
 plt.xticks(fontsize=12)
 plt.show()
-
 
 #%%
 # =============================================================================
