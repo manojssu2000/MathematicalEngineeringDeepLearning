@@ -65,7 +65,7 @@ Below is a detailed list of the source code used for creating figures and tables
 | 4.6    | Momentum enhancing gradient descent |  [Python](Python/Non-convex-landscapes.py)  | 
 | 4.7    | The computational graph for automatic differentiation |  [TikZ]()  | 
 | 4.8    | Line search concepts |  [Python](Python/Line-search-concepts.py)  | 
-| 4.9    | The zig-zagging property of line search | [Python]()  | 
+| 4.9    | The zig-zagging property of line search | [Python](Python/The-zig-zagging-of-exact-line-search.py)  | 
 | 4.10    | Newton's method in one dimension | [Python]()  | 
 
 
